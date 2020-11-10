@@ -1,0 +1,47 @@
+<mat-toolbar color="primary" class="fixed-header">
+  <mat-toolbar-row >
+    <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span><button mat-button routerLink="/home" ><h3>Productos</h3></button></span>
+    <span class="fill-remaining-space"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <button mat-button routerLink="/products" *ngIf="authSvc.userData$ | async"
+        routerLinkActivate="active">Lista de Productos</button>
+      <button mat-button routerLink="/newProduct" *ngIf="authSvc.userData$ | async"
+        routerLinkActivate="active">Nuevo Producto</button>
+      <button mat-button routerLink="/productDetail" *ngIf="authSvc.userData$ | async"
+        routerLinkActivate="active">Buscar Producto</button>
+      <button mat-button  *ngIf="authSvc.userData$ | async; else showLogin" (click)="onLogout()" >Logout</button>
+
+      <ng-template #showLogin>  
+          <button mat-button routerLink="/login">Login</button>      
+      </ng-template>
+
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+  
+<div style="height: calc(100vh - 64px);">
+  <mat-sidenav-container fxFlexFill >
+    <mat-sidenav #sidenav fxLayout="column" mode="over"  opened="false" 
+    fxHide.gt-sm="true" color="primary">
+      
+      <div fxLayout="column" (click)="sidenav.toggle()">
+        <button mat-button routerLink="/products">Lista de Productos</button>
+        <button mat-button routerLink="/newProduct">Nuevo Producto</button>
+        <button mat-button routerLink="/productDetail">Buscar Producto</button>
+
+      
+      <!-- <a (click)="sidenav.toggle()" mat-list-item>
+        <mat-icon>close</mat-icon> Close
+      </a> -->
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content >
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

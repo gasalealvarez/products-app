@@ -1,0 +1,8 @@
+<h2>{{data.message}}</h2>
+
+<div mat-dialog-content>
+    <app-new-product [product]="data.content"></app-new-product>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cerrar</button>
+</div>

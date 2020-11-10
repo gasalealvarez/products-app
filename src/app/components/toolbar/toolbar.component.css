@@ -1,0 +1,11 @@
+p {
+  font-family: Lato;
+}
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+mat-sidenav {
+  background: #673ab7;
+  color: #fff;
+}

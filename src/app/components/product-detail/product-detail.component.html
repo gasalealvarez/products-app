@@ -1,0 +1,47 @@
+<mat-card>
+  <div mat-card-avatar class="example-header-image"></div>
+  <mat-card-title >Producto</mat-card-title>
+  <mat-card-content class="contenido">
+    <form  [formGroup]="contactForm"  (ngSubmit)='findCode()' >   
+      <p>
+        <mat-form-field>
+          <mat-label>Codigo</mat-label>
+          <input matInput formControlName="codigo"  >
+        </mat-form-field>
+      </p>
+      
+      <p>
+        <mat-form-field >
+          <mat-label ></mat-label>
+          <input matInput class="title" formControlName="producto" > 
+        </mat-form-field>
+      </p>
+        <!-- <mat-divider [vertical]="true"></mat-divider> -->
+      <p>
+        <mat-form-field >
+          <span matPrefix>$ &nbsp;</span>
+          <input matInput  formControlName="precioTarjeta" >
+          <mat-hint>Precio Final</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field >
+          <span matPrefix>$ &nbsp;</span>
+          <input matInput   formControlName="precioFinal" >
+          <mat-hint>Precio Contado</mat-hint>
+        </mat-form-field>
+      </p>
+
+     <div *ngIf="fecha">{{ fecha | timeago }}</div>
+
+     <button  class="boton" type="submit" mat-flat-button color="primary">Buscar</button>
+    </form>
+    </mat-card-content>
+</mat-card>
+
+
+
+  <div class="container-spinner" *ngIf="buscando">
+    <mat-spinner mode="indeterminate"  ></mat-spinner>
+  </div>
+

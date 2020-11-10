@@ -1,0 +1,66 @@
+<section class="mat-typography">
+  </section>
+    <div class="container"  fxLayout="row wrap" >
+      <form class="example-form"  [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Producto</mat-label>
+            <input matInput  class="form-control"  name="producto" placeholder="Nombre del item" 
+            formControlName="producto" [ngClass]="{ 'is-invalid': submitted && f.producto.errors }">
+            <div *ngIf="submitted && f.producto.errors" class="invalid-feedback">
+              <div *ngIf="f.producto.errors.required">El producto es requerido</div>
+          </div>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Codigo</mat-label>
+            <input matInput  name="codigo" placeholder="Codigo del Producto" 
+            formControlName="codigo"  [ngClass]="{ 'is-invalid': submitted && f.codigo.errors }">
+            <div *ngIf="submitted && f.codigo.errors" class="invalid-feedback">
+              <div *ngIf="f.codigo.errors.required">El Codigo es requerido</div>
+          </div>
+          </mat-form-field>
+  
+              <!-- <button  class="button-generator" type="button" mat-raised-button 
+               (click)="codeGenerator()">Generar Codigo</button> -->
+      
+      
+        <input matinput ="id" type="hidden" formControlName="id"> 
+      
+      
+        <p>
+          <!-- <button mat-raised-button (click)="openDialog()">Nuevo Viajante</button> -->
+        </p>
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Precio Costo</mat-label>
+            <input matInput  name="precio"  placeholder="Precio Costo" 
+            formControlName="precio" [ngClass]="{ 'is-invalid': submitted && f.precio.errors }">
+            <div *ngIf="submitted && f.precio.errors" class="invalid-feedback">
+              <div *ngIf="f.precio.errors.required">El Precio es requerido</div>
+          </div>
+          </mat-form-field>
+          
+          <mat-form-field class="example-full-width">
+            <mat-label>Precio Final</mat-label>
+            <input matInput name="precioFinal" (change)="calculador()" placeholder="Precio Final" 
+            formControlName="precioFinal"  [ngClass]="{ 'is-invalid': submitted && f.precioFinal.errors }">
+            <div *ngIf="submitted && f.precioFinal.errors" class="invalid-feedback">
+              <div *ngIf="f.precioFinal.errors.required">El precio Final es requerido</div>
+          </div>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Precio Tarjeta</mat-label>
+            <input matInput  name="precioTarjeta"placeholder="Precio Con tarjeta" 
+              formControlName="precioTarjeta" [ngClass]="{ 'is-invalid': submitted && f.precioTarjeta.errors }">
+              <div *ngIf="submitted && f.precioTarjeta.errors" class="invalid-feedback">
+                <div *ngIf="f.precioTarjeta.errors.required">El Precio con Tarjeta es requerido</div>
+            </div>
+            <input formControlName="fechaActualizacion" style="display:none"> 
+          </mat-form-field>
+        </p>
+        <!-- {{hours | timeAgo}} -->
+        <div class="container-button">
+          <button type="button" mat-raised-button (click)="addProduct()">Guardar cambios</button> 
+        </div>
+      </form>
+  </div>

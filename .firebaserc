@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "products-firebase-5a583": {
+      "hosting": {
+        "products-app": [
+          "products-firebase-5a583"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "products-firebase-5a583"
+  }
+}

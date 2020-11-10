@@ -1,0 +1,40 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    border-bottom-width: 10px;
+   
+    /* background: grey; */
+    justify-content: center;
+    /* display: flex; */
+    flex-direction: row;
+  
+    margin: 0 auto;
+    text-align: center;
+    /* border-radius: 10px;
+    border: 1px solid #666666; */
+    width: 500px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .button-generator {
+    justify-content: right;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  /* .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+  } */
+  .mat-typography {
+    padding: 20px;
+  }
+  

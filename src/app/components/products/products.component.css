@@ -1,0 +1,97 @@
+  table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  /* td, th {
+    width: 25%;
+  } */
+
+
+  .mat-column-producto {
+    word-wrap: break-word !important;
+    white-space: normal !important;
+    flex: 0 35% !important;
+    width: 35% !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  
+    word-break: break-word;
+  
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  .mat-column-codigo {
+    word-wrap: break-word !important;
+    white-space: normal !important;
+    flex: 0 0 20% !important;
+    width: 20% !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    word-break: break-word;
+
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  .mat-column-precioFinal {
+    word-wrap: break-word !important;
+    white-space: normal !important;
+    flex: 0 0 15% !important;
+    width: 15% !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  
+
+    word-break: break-word;
+
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  .mat-column-precioTarjeta {
+    word-wrap: break-word !important;
+    white-space: normal !important;
+    flex: 0 0 15% !important;
+    width: 15% !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+ 
+
+    word-break: break-word;
+
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+  
+  .mat-column-actions {
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 15% !important;
+    width: 15% !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    word-break: break-word;
+
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  
